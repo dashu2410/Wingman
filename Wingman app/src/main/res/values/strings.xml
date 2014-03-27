@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Love Confessions (TheWingman)</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_id">579492272090347</string>
+    <string name="action_people">Select your Crush</string>
+    <string name="action_people_default">Select a friend</string>
+    <string name="error_dialog_title">Error</string>
+    <string name="error_dialog_button_text">OK</string>
+    <string name="single_user_selected">%1$s</string>
+    <string name="two_users_selected">%1$s and %2$s</string>
+    <string name="multiple_users_selected">%1$s and %2$s others</string>
+
+</resources>

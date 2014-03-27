@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.co.recex.wingman"
+    android:versionCode="7"
+    android:versionName="2.2">
+
+    <uses-sdk
+        android:minSdkVersion="12"
+        android:targetSdkVersion="19"
+        />
+
+    <!-- Allow to connect with internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    //These permissions are only required for showing the ad when pressing the Home button:
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+    <supports-screens
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="false"
+        />
+    <application
+        android:debuggable="false"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name=".WingmanApplication" >
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+        <activity
+            android:label="@string/app_name"
+            android:name="in.co.recex.wingman.DashboardActivity"
+            android:configChanges="orientation|screenSize" >
+
+        </activity>
+        <activity android:name="in.co.recex.wingman.PickerActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <!-- StartApp  activities! -->
+        <activity android:name="com.startapp.android.eula.EULAActivity"
+            android:theme="@android:style/Theme.Translucent"
+            android:configChanges="keyboard|keyboardHidden|orientation" />
+
+        <activity android:name="com.startapp.android.publish.list3d.List3DActivity"
+            android:taskAffinity="in.co.recex.wingman.AppWall"
+            android:theme="@android:style/Theme" />
+
+        <activity android:name="com.startapp.android.publish.AppWallActivity"
+            android:theme="@android:style/Theme.Translucent"
+            android:taskAffinity="in.co.recex.wingman.AppWall"
+            android:configChanges="orientation|keyboardHidden" />
+
+
+        <!--  Login Activity -->
+        <activity
+            android:label="The Wingman"
+            android:name="in.co.recex.wingman.FbLoginActivity">
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:label="Refresh Activity"
+            android:name="in.co.recex.wingman.Refresh"/>
+
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:label="@string/app_name" >
+        </activity>
+    </application>
+
+</manifest>
